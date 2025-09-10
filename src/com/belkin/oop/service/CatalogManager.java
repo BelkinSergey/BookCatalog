@@ -8,8 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CatalogManager {
-
-
     private final List<Book> catalog;
 
     public CatalogManager() {
@@ -19,10 +17,6 @@ public class CatalogManager {
     public void addBook(String title, String author, int copies) {
         Book book = new Book(title, author, copies);
         catalog.add(book);
-    }
-
-    public List<Book> getCatalog() {
-        return catalog;
     }
 
     public void takeBook(String title) {
@@ -62,7 +56,7 @@ public class CatalogManager {
     }
 
     public List<Book> getAllBooks() {
-        return getCatalog();
+        return this.catalog;
     }
 }
 
